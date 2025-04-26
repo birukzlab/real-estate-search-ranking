@@ -176,4 +176,6 @@ kaggle.json
 venv
 .venv
 venv/
+kaggle.json/
+
 
