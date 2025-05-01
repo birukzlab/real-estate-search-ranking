@@ -1,0 +1,38 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Estate Search</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        form { max-width: 400px; margin: auto; }
+        label, input, select { display: block; width: 100%; margin-bottom: 10px; }
+        input[type=submit] { width: auto; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h2>🏡 Real Estate Search</h2>
+    <form method="POST" action="/rank">
+        <label>City:</label>
+        <input type="text" name="city" required>
+
+        <label>State:</label>
+        <input type="text" name="state" required>
+
+        <label>Minimum Bedrooms:</label>
+        <input type="number" name="min_bed" min="0" value="3">
+
+        <label>Minimum Bathrooms:</label>
+        <input type="number" name="min_bath" min="0" value="2">
+
+        <label>Minimum House Size (sqft):</label>
+        <input type="number" name="min_house_size" min="0" value="1000">
+
+        <label>Maximum Price:</label>
+        <input type="number" name="max_price" min="0" value="500000">
+
+        <input type="submit" value="🔍 Rank Listings">
+    </form>
+</body>
+</html>
