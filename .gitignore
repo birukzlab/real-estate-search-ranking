@@ -177,5 +177,8 @@ venv
 .venv
 venv/
 kaggle.json/
+processed/
+raw/
+
 
 
