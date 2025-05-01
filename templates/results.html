@@ -1,0 +1,39 @@
+<!-- templates/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Listings</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        th { background-color: #f5f5f5; }
+    </style>
+</head>
+<body>
+    <h2>Top 10 Ranked Listings</h2>
+    <table>
+        <tr>
+            <th>City</th>
+            <th>State</th>
+            <th>Bed</th>
+            <th>Bath</th>
+            <th>Size (sqft)</th>
+            <th>Price</th>
+            <th>Relevance Score</th>
+        </tr>
+        {% for listing in listings %}
+        <tr>
+            <td>{{ listing.city }}</td>
+            <td>{{ listing.state }}</td>
+            <td>{{ listing.bed }}</td>
+            <td>{{ listing.bath }}</td>
+            <td>{{ listing.house_size }}</td>
+            <td>${{ '{:,.0f}'.format(listing.price) }}</td>
+            <td>{{ '{:.2f}'.format(listing.relevance_score) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

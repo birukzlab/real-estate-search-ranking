@@ -1,0 +1,7 @@
+query_id,ndcg@5,readable_query,precision@5
+0-2,0.6608397947263839,"3+ beds, under $500,000",0.8
+1-2,1.0,"3+ beds, 2+ baths, 1800+ sqft, under $350,000",1.0
+2-2,1.0,"3+ beds, under $500,000",1.0
+4-2,1.0,1500+ sqft,1.0
+5-0,1.0,"2+ baths, under $600,000",1.0
+5-1,1.0,"under $400,000",1.0
